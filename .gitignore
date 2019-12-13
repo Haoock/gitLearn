@@ -1,0 +1,23 @@
+# ignore all files in the Videos/ directory
+# 忽视所有Videos文件夹中的文件
+Videos/
+
+# ignore .txt files(Regular Express)
+# 忽视当前目录下txt文件（正则表达式）
+*.txt
+
+#ignore all txt files in Pictures directory,but not in Pictures/test directory
+#忽视所有在Pictures目录下的以txt为后缀的文件，但是不忽略Pictures/test下的
+Pictures/*.txt
+
+# ignore all docx files in Pictures directory,including Pictures/test
+#忽视包含Pictures/test和Pictures/目录下的所有以docx为后缀的文件
+Pictures/**/*.docx
+
+#track Test4.txt,even though you're ignoring .txt files above
+#这里忽视了除Test4.txt文件以外txt文件，即使在上面定义了忽视.txt文件 
+!Test4.txt
+
+#Only ignore Test6.md in the current directory,not subdir/Test6.md
+#只是忽略当前目录下的Test6.md而不是子目录中Test6.md
+/Test6.md
